@@ -20,3 +20,5 @@ module Batch1152GardensAndPlants
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+Rails.application.config.assets.paths << Rails.root.join('node_modules')
