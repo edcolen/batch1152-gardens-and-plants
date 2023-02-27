@@ -32,6 +32,29 @@
   }
 }
 
+.btn-add {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 7px;
+  right: 35px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.tags-card {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  width: 80%;
+  span {
+    font-size: 0.5em;
+    font-weight: lighter;
+  }
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {

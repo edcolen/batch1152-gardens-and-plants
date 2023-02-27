@@ -4,7 +4,13 @@
   <% @garden.plants.each do |plant| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.image %>)">
       <%= plant.name %>
+      <%= link_to '+', new_plant_plant_tag_path(plant), class: 'btn-add' %>
       <%= link_to 'x', plant_path(plant), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn-delete' %>
+      <div class="tags-card">
+        <% plant.tags.each do |tag| %>
+          <span><%= tag.name %></span>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
