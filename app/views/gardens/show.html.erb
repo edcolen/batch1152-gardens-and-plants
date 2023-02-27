@@ -1,8 +1,6 @@
-<p style="color: green"><%= notice %></p>
-
 <%= render @garden %>
 
-<div class="cards pt-4 mt-3 mx-3">
+<div class="cards pt-4 my-3 mx-5">
   <% @garden.plants.each do |plant| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= plant.image %>)">
       <%= plant.name %>
@@ -11,7 +9,7 @@
   <% end %>
 </div>
 
-<div class="container mt-3">
+<div class="container my-5">
   <div class="row justify-content-center">
     <div class="col-6">
       <h2>Add a plant</h2>
@@ -22,8 +20,5 @@
       <% end %>
     </div>
   </div>
-</div>
-
-<div>
-  <%= link_to "Back to gardens", gardens_path %>
+  <%= link_to "Back to gardens", gardens_path, class: 'btn btn-sm btn-success' %>
 </div>
